@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet href="href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+	/*template came with this internal style-sheet */
+	
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	/*#main {margin-left: 120px}*/
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}};
+</style>
+
+<script>
+	//using w3-classes to hide and show the sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").classList.add("w3-show"); 
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").classList.remove("w3-show").classList.add("w3-hide");
+	}
+</script>
+</head>
+<body class="w3-mobile">
+	<!--Mobile Friendly Hamburger Menu-->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-hide-large w3-hide-medium w3-center w3-black" id="mySidebar">
+	  <button class="w3-bar-item w3-button w3-xxlarge w3-hide-large w3-hide-medium" onclick="w3_close()">&times;</button>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#">HOME</a>
+	</div>
+
+	<nav class="w3-sidebar w3-bar-block w3-hide-small w3-center w3-black">
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-large">
+		<p class="w3-large">LOGO</p>
+	  </a>
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-32 w3-light-gray">
+		<i class="fa fa-home w3-xxlarge"></i>
+		<p class="w3-small">HOME</p>
+	  </a>
+	</nav>
+
+	<div class="w3-main w3-mobile" style="margin-left:120px">
+		<div class="w3-blue-grey">
+			<div class="w3-dropdown-hover w3-right">
+			<button class="w3-button w3-padding w3-blue-grey"><a href="Login.html">Login</a></button>
+			</div>
+		  <button class="w3-button w3-xxlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+		  <a href="#" style="text-decoration:none">
+			  <div class="w3-container w3-blue-grey">
+				<h1 class="w3-center">PROXIMATE</h1>
+				<h6 class="w3-center">Connect with community.</h6>
+			  </div>
+		   </a>
+		</div>
+		<center>
+		<div class="w3-row w3-container">
+		  <div class="w3-col m3 w3-center">
+			<p></p>
+			</div>
+			<form class="w3-container w3-card-4 w3-col m6 w3-center w3-margin-top" action="Home.html">
+				<h2>Sign In</h2>
+				<hr>
+				<a href="#" class="w3-hover-opacity"><i class="fab fa-twitter-square w3-jumbo w3-text-blue"></i></a>
+				<a href="#" class="w3-hover-opacity"><i class="fab fa-facebook w3-jumbo w3-text-indigo"></i></a>
+				<a href="#" class="w3-hover-opacity"><i class="fab fa-linkedin w3-jumbo w3-text-blue"></i></a>
+				<hr>
+				<p>
+				<input class="w3-input w3-center" type="email" style="width:100%" placeholder ="Email Address*" required>
+				</p>
+				<input class="w3-input w3-center" type="password" style="width:100%" placeholder="Password*" required>
+				</p>
+				<p>
+				<button class="w3-button w3-section w3-teal w3-ripple" type="submit">Log In</button>
+				<a href="Login.html"><span class="w3-button w3-red w3-section w3-ripple" formnovalidate>Cancel</span></a></p>
+				<p>
+				<input id="stayLoggedIn" class="w2-check" type="checkbox" checked="checked">
+				<label>Remember me</label></p>
+				<p class= "w3-medium"><b><a href="#" class="w3-text-blue w3-hover-opacity">Forgot Password</a></b></p>
+			</form>
+		</div>
+		<center>
+		<!--Footer-->
+		<div class="w3-row w3-blue-grey w3-bottom w3-center w3-small w3-hide-small w3-padding">
+			<p class="w3-hide-small">&copy; Copyright 2019 PROXIMATE</p>
+			<p class="w3-hide-small">Designed by Anika Neela</p>
+			<a href="#"><i class="fab fa-facebook-f w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-twitter w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-google w3-large w3-round w3-margin-left"></i></a>
+		</div>
+	</div>
+</body>
+</html>
