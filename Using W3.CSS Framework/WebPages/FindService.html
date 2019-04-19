@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>Find Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet href="href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+	/*template came with this internal style-sheet */
+	
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	/*#main {margin-left: 120px}*/
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}};
+	
+ul.breadcrumb {
+	list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+
+<script>
+//using w3-classes to hide and show the sidebar
+function w3_open() {
+	document.getElementById("mySidebar").classList.add("w3-show"); 
+}
+function w3_close() {
+	document.getElementById("mySidebar").classList.remove("w3-show").classList.add("w3-hide");
+}
+//function for revealing filters using w3.css
+function showFilters(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+	x.className += " w3-show";
+  } else { 
+	x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function OpenFilterDetails(evt, info) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tabInfo");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+  }
+  document.getElementById(info).style.display = "block";
+  evt.currentTarget.className += " w3-teal";
+}
+
+function removeClassForDistance(id){
+	document.getElementById(id).classList.remove('w3-red');
+}
+function addClassForDistance(id){
+	document.getElementById(id).classList.add('w3-red');
+}
+
+</script>
+</head>
+<body class="w3-mobile">
+	<!--Mobile Friendly Hamburger Menu-->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-hide-large w3-hide-medium w3-center w3-black" id="mySidebar">
+	  <button class="w3-bar-item w3-button w3-xxlarge w3-hide-large w3-hide-medium" onclick="w3_close()">&times;</button>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#">HOME</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#contact">INBOX</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#schedule">SCHEDULE</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#alerts">ALERTS</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#favorites">FAVORITES</a>
+	</div>
+
+	<nav class="w3-sidebar w3-bar-block w3-hide-small w3-center w3-black">
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-large">
+		<p class="w3-large">LOGO</p>
+	  </a>
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-32 w3-light-gray" id="trackClicks1">
+		<i class="fa fa-home w3-xxlarge"></i>
+		<p class="w3-small">HOME</p>
+	  </a>
+		<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fa fa-envelope w3-xxlarge"></i>
+		<p class= "w3-small">INBOX</p>
+	  </a>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-calendar-alt w3-xxlarge"></i>
+		<p class= "w3-small">SCHEDULE</p>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-bell w3-xxlarge"></i>
+		<span class="w3-badge w3-small w3-green">3</span>
+		<p class= "w3-small w3-center">ALERTS</p>
+	  </a>
+	  </a>
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-heart w3-xxlarge"></i>
+		<p class= "w3-small">FAVORITES</p>
+	  </a>
+	</nav>
+	<div class="w3-main w3-mobile" style="margin-left:120px">
+		<div class="w3-blue-grey">
+			<div class="w3-dropdown-hover w3-right w3-blue-grey">
+			<button class="w3-button w3-padding w3-blue-grey"><a href="">Molly Davis</a></button>
+				<div id="accountDropDown" class="w3-dropdown-content w3-bar-block w3-card-4 w3-border">
+				  <a href="MyProfile.html" class="w3-bar-item w3-button">My Profile</a>
+				  <a href="PaymentMethod.html" class="w3-bar-item w3-button">Payment Method</a>
+				  <a href="#" class="w3-bar-item w3-button">Help Center</a>
+				  <a href="#" class="w3-bar-item w3-button">Privacy</a>
+				  <a href="Login.html" class="w3-bar-item w3-button">Logout</a>
+				</div>
+			</div>
+		  <button class="w3-button w3-xxlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+		  <a style="text-decoration:none">
+			  <div class="w3-container w3-blue-grey">
+				<h1 class="w3-center">FIND SERVICE</h1>
+				<h6 class="w3-center">Hire the best freelancers in town.</h6>
+			  </div>
+		   </a>
+	   <!--Breadcrumb-->
+		<ul class="breadcrumb w3-medium w3-light-gray w3-padding">
+		  <li><a href="Home.html">Home</a></li>
+		  <li>Find Service</li>
+		</ul>	
+		</div>		
+		<!--Search area-->
+		<div class="w3-padding-32">			
+			<div class="w3-padding-large">
+				<form class="w3-input-container w3-center" action="ServiceLists.Html">
+				<center>
+				  <input class="w3-round-large w3-border w3-center w3-padding" type="text" placeholder="Search  e.g. Cleaning or Tera" name="Search" style="width:50%">
+				  <button type="submit" class="w3-button w3-deep-orange w3-round-large"><i class="fas fa-search w3-large"></i></button>
+					<span onclick="showFilters('searchFilter')"><i class="fas fa-filter w3-large w3-button w3-teal w3-round-large"></i></span>
+						
+						<!--Search Filters-->
+						<div id="searchFilter" class="w3-hide w3-container w3-light-gray " style="width:70%">
+							  <div class="w3-bar w3-black w3-large">
+								<span class="w3-bar-item w3-button tablink w3-teal" onclick="OpenFilterDetails(event,'Location')">Location</span>
+								<span class="w3-bar-item w3-button tablink" onclick="OpenFilterDetails(event,'DateNTime')">Date & Time</span>
+							  </div>
+							  
+							   <div id="Location" class="w3-container tabInfo">
+								<p class="w3-large"><i class="fas fa-map-marker-alt"></i><b> Distance</b></p>
+								<div class="w3-bar w3-black w3-small" id="entireOps">
+									<span id="op1" class="w3-bar-item w3-button" onclick="removeClassForDistance('op2');removeClassForDistance('op3');removeClassForDistance('op4');addClassForDistance('op1');">0.5 mi</span>
+									<span id="op2" class="w3-bar-item w3-button" onclick="removeClassForDistance('op1');removeClassForDistance('op3');removeClassForDistance('op4');addClassForDistance('op2');">2 mi</span>
+									<span id="op3" class="w3-bar-item w3-button" onclick="removeClassForDistance('op1');removeClassForDistance('op2');removeClassForDistance('op4');addClassForDistance('op3');">10 mi</span>
+									<span id="op4" class="w3-bar-item w3-button" onclick="removeClassForDistance('op1');removeClassForDistance('op2');removeClassForDistance('op3');addClassForDistance('op4');">25 mi</span>
+								</div>
+								<p>
+								<input class="w3-input w3-border w3-round-large w3-center w3-small" type="text" style="width:50%" placeholder="Enter address of alternate location">
+								</p>
+								<p><a href="#" class="w3-text-blue"><i class="fas fa-location-arrow"></i> Use my current location</a></p>
+							  </div>
+
+							  <div id="DateNTime" class="w3-container tabInfo" style="display:none">
+								<p class="w3-large"><i class="fas fa-calendar-week"></i><b> Date & Time</b></p>
+									<div class="w3-bar w3-black w3-small" id="entireOps">
+										<span id="ops1" class="w3-bar-item w3-button" onclick="removeClassForDistance('ops2');removeClassForDistance('ops3');removeClassForDistance('ops4');addClassForDistance('ops1');">Morning</span>
+										<span id="ops2" class="w3-bar-item w3-button" onclick="removeClassForDistance('ops1');removeClassForDistance('ops3');removeClassForDistance('ops4');addClassForDistance('ops2');">Afternoon</span>
+										<span id="ops3" class="w3-bar-item w3-button" onclick="removeClassForDistance('ops1');removeClassForDistance('ops2');removeClassForDistance('ops4');addClassForDistance('ops3');">Evening</span>
+										<span id="ops4" class="w3-bar-item w3-button" onclick="removeClassForDistance('ops1');removeClassForDistance('ops2');removeClassForDistance('ops3');addClassForDistance('ops4');">Night</span>
+									</div>
+								<p>Choose a specific time for your service</p> 
+								<input type="datetime-local" class="w3-input w3-border w3-round-large w3-center w3-small w3-margin" style="width:30%"
+								   name="service-time" value="2018-06-12T19:30"
+								   min="2018-06-07T00:00" max="2018-06-14T00:00">
+							  </div>
+						</div>
+				  </center>
+				</form>
+			</div>
+		</div>
+		<hr>		
+		<!--Popular Services Area-->
+		<div class="w3-container">
+			<center>
+			<label class="w3-large">Popular Service Categories</label></center>
+		</div>	
+		<div class="w3-row-padding w3-margin">
+			<div class="w3-quarter">
+				<a href="ServiceLists.html" style="text-decoration:none">
+					<div class="w3-card-2 w3-hover-grayscale">
+						<img src="Images/snow.jpg" class=" w3-padding" style="width:100%; height:100%">
+						<div class="w3-container">
+							<p class="w3-large w3-center w3-text-deep-orange"><b>Snow Removal</b></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="w3-quarter">
+				<a href="ServiceLists.html" style="text-decoration:none">
+					<div class="w3-card-2 w3-hover-grayscale">
+						<img src="Images/clean.jpg" class=" w3-padding" style="width:100%; height:100%">
+						<div class="w3-container">
+							<p class="w3-large w3-center w3-text-deep-orange"><b>Cleaning</b></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="w3-quarter">
+				<a href="ServiceLists.html" style="text-decoration:none">
+					<div class="w3-card-2 w3-hover-grayscale">
+						<img src="Images/yard.jpg" class=" w3-padding" style="width:100%; height:100%">
+						<div class="w3-container">
+							<p class="w3-large w3-center w3-text-deep-orange"><b>Yard Work</b></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="w3-quarter">
+				<a href="ServiceLists.html" style="text-decoration:none">
+					<div class="w3-card-2 w3-hover-grayscale">
+						<img src="Images/repair.jpg" class=" w3-padding" style="width:100%">
+						<div class="w3-container">
+							<p class="w3-large w3-center w3-text-deep-orange"><b>Repair</b></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>	
+	<!--Footer-->
+	<div class="w3-display-container w3-blue-grey w3-center w3-small w3-hide-small">
+		<p class="w3-hide-small w3-padding">&copy; Copyright 2019 PROXIMATE</p>
+		<p class="w3-hide-small">Designed by Anika Neela</p>
+		<a href="#"><i class="fab fa-facebook-f w3-large w3-round w3-margin-left"></i></a>
+		<a href="#"><i class="fab fa-twitter w3-large w3-round w3-margin-left"></i></a>
+		<a href="#"><i class="fab fa-google w3-large w3-round w3-margin-left"></i></a>
+	</div>
+</body>
+</html>
