@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>Inbox</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet href="href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+	/*template came with this internal style-sheet */
+	
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	/*#main {margin-left: 120px}*/
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}};
+</style>
+<script>
+	//using w3-classes to hide and show the sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").classList.add("w3-show"); 
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").classList.remove("w3-show").classList.add("w3-hide");
+	}
+
+</script>
+</head>
+<body class="w3-mobile">
+	<!--Mobile Friendly Hamburger Menu-->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-hide-large w3-hide-medium w3-center w3-black" id="mySidebar">
+	  <button class="w3-bar-item w3-button w3-xxlarge w3-hide-large w3-hide-medium" onclick="w3_close()">&times;</button>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#">HOME</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#contact">INBOX</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#schedule">SCHEDULE</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#alerts">ALERTS</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#favorites">FAVORITES</a>
+	</div>
+
+	<nav class="w3-sidebar w3-bar-block w3-hide-small w3-center w3-black">
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-large">
+		<p class="w3-large">LOGO</p>
+	  </a>
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-32">
+		<i class="fa fa-home w3-xxlarge"></i>
+		<p class="w3-small">HOME</p>
+	  </a>
+		<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-light-gray">
+		<i class="fa fa-envelope w3-xxlarge"></i>
+		<p class= "w3-small">INBOX</p>
+	  </a>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-calendar-alt w3-xxlarge"></i>
+		<p class= "w3-small">SCHEDULE</p>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-bell w3-xxlarge"></i>
+		<span class="w3-badge w3-small w3-green">3</span>
+		<p class= "w3-small w3-center">ALERTS</p>
+	  </a>
+	  </a>
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large" id="trackClicks5">
+		<i class="fas fa-heart w3-xxlarge"></i>
+		<p class= "w3-small">FAVORITES</p>
+	  </a>
+	</nav>
+	
+	<!--Inbox/Chat List-->
+	<div class="w3-main w3-mobile" style="margin-left:120px">
+		<div class="w3-third w3-border">
+			<div class="w3-panel w3-blue-grey w3-padding" style="margin-top:0px">
+			<center>
+				<button type="submit" class="w3-button w3-text-light-gray w3-round-large w3-left"><i class="fas fa-cog w3-large"></i></button>
+				<span class="w3-text-center w3-xlarge">Inbox</span>
+				<button type="submit" class="w3-button w3-text-light-gray w3-round-large w3-right"><i class="far fa-edit w3-large"></i></button>
+			</div></center>
+			<div class="w3-bar-block">
+					<div class="w3-padding-large w3-center">
+						<form class="w3-input-container w3-center">
+						  <input class="w3-round-large w3-border w3-center w3-padding w3-light-gray" type="text" placeholder="Search" name="Search" style="width:70%">
+						  <button type="submit" class="w3-button w3-light-grey w3-round-large"><i class="fas fa-search w3-large"></i></button>
+						  <button type="submit" class="w3-button w3-light-gray w3-round-large"><i class="far fa-address-book w3-large"></i></button>
+						</form>
+					</div>
+				<button class="w3-bar-item w3-button w3-border w3-light-gray">
+					<div class="w3-bar w3-row w3-padding-large">
+						<span class="w3-large"><b>Tina Thomas</span><br>
+						<span>Lorem ipsum dolor sit amet.</b></span>
+					</div>
+				</button>
+				<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large"><b>Michael Robert</span><br>
+						<span>Lorem ipsum dolor sit amet!! Lorem.</b></span>
+					</div>
+				</button>
+				<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Matthew Renea</span><br>
+						<span>Lorem ipsum dolor sit amet. Aste.</span>
+					</div>
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Katie Holler</span><br>
+						<span>Lorem ipsum.</span>
+					</div>
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Sebastian Este</span><br>
+						<span>Lorem.</span>
+					</div>
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Fahim Ahmed</span><br>
+						<span>Lorem ipsum dolor.</span>
+					</div>
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Loren Isla</span><br>
+						<span>Lorem ipsum dolor! Lorem</span>
+					</div>
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Lafayet Kathrine</span><br>
+						<span>Lorem ipsum.</span>
+					</div>
+				</button>					
+				</button>
+					<button class="w3-bar-item w3-button w3-border" ">
+					<div class="w3-container w3-row w3-padding-large">
+						<span class="w3-large">Sam Chandler</span><br>
+						<span>Lorem ipsum dolor Lorem.</span>
+					</div>
+				</button>
+			</div>		
+		</div>
+		<div class="w3-container w3-rest w3-border">	
+			<div class="w3-padding w3-border-light-grey" style="margin:0px"><center>
+				<span class="w3-text-center w3-xlarge"><a href="OfferDetails.html" style="text-decoration:none">Tina Thomas</a></span>
+				<button type="submit" class="w3-button w3-text-blue-grey w3-round-large w3-right"><i class="fas fa-info-circle w3-xlarge"></i></button>
+			</div></center>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="OfferDetails.html"><img src="Images/cleaner1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large">Lorem ipsum dolor sit amet!! Lorem.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="MyProfile.html"><img src="Images/molly.jpg" class="w3-bar-item w3-right w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large w3-right" style="margin-top:2%; margin-right:0.5%;">Lorem ipsum dolor.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="OfferDetails.html"><img src="Images/cleaner1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large">Lorem ipsum dolor Lorem.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="MyProfile.html"><img src="Images/molly.jpg" class="w3-bar-item w3-right w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large w3-right" style="margin-top:2%; margin-right:0.5%;">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="OfferDetails.html"><img src="Images/cleaner1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large">Lorem ipsum dolor sit amet!! Lorem.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="MyProfile.html"><img src="Images/molly.jpg" class="w3-bar-item w3-right w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large w3-right" style="margin-top:2%; margin-right:0.5%;">Lorem ipsum dolor.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large">
+			<a href="OfferDetails.html"><img src="Images/cleaner1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large">Lorem ipsum dolor sit amet.</span>
+		</div>
+		<div class="w3-container w3-rest w3-row w3-padding-large w3-margin-bottom">
+			<a href="MyProfile.html"><img src="Images/molly.jpg" class="w3-bar-item w3-right w3-circle w3-hide-small" style="width:9%"></a>
+			<span class="w3-light-grey w3-round-large w3-padding-large w3-right" style="margin-top:2%; margin-right:0.5%;">Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor.</span>
+		</div>
+		<!--Input from the user-->
+		<div class="w3-container w3-rest w3-row w3-padding-large w3-border-top">
+			<input class="w3-round-large w3-border w3-rest w3-padding w3-light-gray" type="text" style="width:90%">
+			<button type="submit" class="w3-button w3-light-grey w3-round-large"><i class="fas fa-paper-plane w3-large"></i></button>
+		</div>
+	</div>
+</body>
+</html>
