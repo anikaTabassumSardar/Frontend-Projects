@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>Offer Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet href="href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+	/*template came with this internal style-sheet */
+	
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	/*#main {margin-left: 120px}*/
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}};
+	
+ul.breadcrumb {
+	list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+
+<script>
+	//using w3-classes to hide and show the sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").classList.add("w3-show"); 
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").classList.remove("w3-show").classList.add("w3-hide");
+	}
+</script>
+</head>
+<body class="w3-mobile">
+	<!--Mobile Friendly Hamburger Menu-->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-hide-large w3-hide-medium w3-center w3-black" id="mySidebar">
+	  <button class="w3-bar-item w3-button w3-xxlarge w3-hide-large w3-hide-medium" onclick="w3_close()">&times;</button>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#">HOME</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#contact">INBOX</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#schedule">SCHEDULE</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#alerts">ALERTS</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#favorites">FAVORITES</a>
+	</div>
+
+	<nav class="w3-sidebar w3-bar-block w3-hide-small w3-center w3-black">
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-large">
+		<p class="w3-large">LOGO</p>
+	  </a>
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-32 w3-light-gray">
+		<i class="fa fa-home w3-xxlarge"></i>
+		<p class="w3-small">HOME</p>
+	  </a>
+		<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fa fa-envelope w3-xxlarge"></i>
+		<p class= "w3-small">INBOX</p>
+	  </a>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-calendar-alt w3-xxlarge"></i>
+		<p class= "w3-small">SCHEDULE</p>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-bell w3-xxlarge"></i>
+		<span class="w3-badge w3-small w3-green">3</span>
+		<p class= "w3-small w3-center">ALERTS</p>
+	  </a>
+	  </a>
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-heart w3-xxlarge"></i>
+		<p class= "w3-small">FAVORITES</p>
+	  </a>
+	</nav>
+
+	<div class="w3-main w3-mobile" style="margin-left:120px">
+		<div class="w3-blue-grey">
+			<div class="w3-dropdown-hover w3-right w3-blue-grey">
+			<button class="w3-button w3-padding w3-blue-grey"><a href="">Molly Davis</a></button>
+				<div id="accountDropDown" class="w3-dropdown-content w3-bar-block w3-card-4 w3-border">
+				  <a href="MyProfile.html" class="w3-bar-item w3-button">My Profile</a>
+				  <a href="PaymentMethod.html" class="w3-bar-item w3-button">Payment Method</a>
+				  <a href="#" class="w3-bar-item w3-button">Help Center</a>
+				  <a href="#" class="w3-bar-item w3-button">Privacy</a>
+				  <a href="Login.html" class="w3-bar-item w3-button">Logout</a>
+				</div>
+			</div>
+		  <button class="w3-button w3-xxlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+		  <a style="text-decoration:none">
+			  <div class="w3-container w3-blue-grey">
+				<h1 class="w3-center">OFFER DETAILS</h1>
+				<h6 class="w3-center">Choose from the top providers.</h6>
+			  </div>
+		   </a>
+	   <!--Breadcrumb-->
+		<ul class="breadcrumb w3-medium w3-light-gray w3-padding" style="margin:0px;0px;">
+		  <li><a href="Home.html">Home</a></li>
+		  <li><a href="FindService.html">Find Service</a></li>
+		  <li><a href="ServiceLists.html">Service Offers</a></li>
+		  <li>Offer Details</li>
+		</ul>	
+		</div>
+		<!--success banner-->
+		<div id="success" class="w3-container w3-green w3-display-container w3-animate-opacity">
+		  <span onclick="this.parentElement.style.display='none'"
+		  class="w3-button w3-green w3-display-topright">x</span>
+			<p>Message sent!</p>
+		</div>	
+		<!--Offer details-->
+		<ul class="w3-ul w3-padding-large">
+			<li class="w3-bar">
+				<img src="Images/cleaner1.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:20%"></a>
+				<div class="w3-bar-item w3-padding">
+					<br>
+					<span class="w3-large"><b>Tina Thomas</b></span>
+					<br>
+					<span>House Cleaner</span>
+					<br>
+					<span>$20/hr</span>
+					<br>
+					<span class="fas fa-star w3-text-orange"></span>
+					<span class="fas fa-star w3-text-orange"></span>
+					<span class="fas fa-star w3-text-orange"></span>
+					<span class="fas fa-star w3-text-orange"></span>
+					<span class="fas fa-star-half-alt w3-text-orange"></span>
+					<br>
+					<span>Ratings (5)</span>
+					<br>
+					<a href="OfferDetails.html" style="text-decoration:none"><button class="w3-button w3-pale-red">Cancel Request</button></a><span><button class="w3-button w3-circle w3-margin"><i class="far fa-heart w3-xlarge w3-text-teal"></i></button></span>
+				</div>
+				<span><a href="#"><i class="fas fa-share-alt w3-text-teal w3-right w3-xlarge w3-margin-left w3-hover-opacity"></i></a></span>
+				<span><a href="#"><i class="fas fa-phone w3-xlarge w3-right w3-text-teal w3-margin-left w3-hover-opacity"></i></a></span>
+				<span><a href="#" onclick="document.getElementById('id02').style.display='block'"><i class="fas fa-envelope w3-xlarge w3-right w3-text-teal w3-hover-opacity"></i></a></span>
+			</li>
+			<li class="w3-bar">
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>About Me</b></p>
+						<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
+					</div>
+				</div>
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>Education/Certification</b></p>
+						<p><i>Lorem ipsum dolor sit amet.</i></p>
+					</div>
+				</div>
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>Other Services</b></p>
+						<div class="w3-border">
+						<div class="w3-border w3-padding">
+							<span>
+								<span>Baby-sitting:</span>
+								<span>$20/hr</span>
+							</span>
+							<span><button class="w3-button w3-teal w3-margin" onclick="document.getElementById('id01').style.display='block'">Schedule Service</button></span>
+							<span class="w3-margin-left">Yard Work: $30/hr</span>
+							<span><button class="w3-button w3-teal w3-margin" onclick="document.getElementById('id01').style.display='block'">Schedule Service</button></span>
+							<span class="w3-margin-left">Repair: $15/hr</span>
+							<span><button class="w3-button w3-teal w3-margin" onclick="document.getElementById('id01').style.display='block'">Schedule Service</button></span>
+						</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="w3-bar">
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p class="w3-large"><b>5 Reviews</b></p>
+						<div class="w3-container">
+							<span><b>Mariam Smith</b></span>
+							<span class="fas fa-star w3-text-orange w3-margin-left"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<p class="w3-text-gray">March 2019</p>
+							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
+						</div>
+						<div class="w3-container w3-margin-top">
+							<span><b>Marry Williams</b></span>
+							<span class="fas fa-star w3-text-orange w3-margin-left"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<p class="w3-text-gray">February 2019</p>
+							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i></p>
+						</div>
+						<div class="w3-container w3-margin-top">
+							<span><b>Zack Knight</b></span>
+							<span class="fas fa-star w3-text-orange w3-margin-left"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star-half-alt w3-text-orange"></span>
+							<p class="w3-text-gray">February 2019</p>
+							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt!!</i></p>
+						</div>
+						<div class="w3-container w3-margin-top">
+							<span><b>Cathy Colbert</b></span>
+							<span class="fas fa-star w3-text-orange w3-margin-left"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star-half-alt w3-text-orange"></span>
+							<p class="w3-text-gray">January 2019</p>
+							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
+						</div>
+						<div class="w3-container w3-margin-top">
+							<span><b>Rita Irani</b></span>
+							<span class="fas fa-star w3-text-orange w3-margin-left"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star w3-text-orange"></span>
+							<span class="fas fa-star-half-alt w3-text-orange"></span>
+							<p class="w3-text-gray">January 2019</p>
+							<p><i>Lorem ipsum dolor sit amet.</i></p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!--Calendar Picker modal to Select date for service-->
+		  <div id="id01" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-center">
+			  <header class="w3-container w3-teal"> 
+			  	<span onclick="document.getElementById('id01').style.display='none'" 
+				class="w3-button w3-display-topright w3-xlarge">&times;</span>
+				<h2>Service Schedule</h2>
+			  </header>
+			  <form class="w3-container w3-padding-32" action="OfferDetails_Success.html">
+				<label for="start" class="w3-large">Service Date:</label><br>
+				<input type="date" id="start" name="service-start" value="2019-07-22" min="2019-01-01" max="2019-12-31" required><br><br>
+				<label for="startTime" class="w3-large">Start Time:</label><br>
+				<input type="time" id="startTime" name="service-time-start" required><br><br>
+				<label for="endTime" class="w3-large">End Time:</label><br>
+				<input type="time" id="endTime" name="service-time-end" required>
+				<br><br>
+				<button class="w3-button w3-teal">Request Service</button>
+			  </form>
+			</div>
+		  </div>
+		  <!--Messaging Option-->
+		  <div id="id02" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-center">
+			  <header class="w3-container w3-teal"> 
+			  	<span onclick="document.getElementById('id02').style.display='none'" 
+				class="w3-button w3-display-topright w3-xlarge">&times;</span>
+				<h2 class="w3-center">Message</h2>
+			  </header>
+			  <form class="w3-container w3-padding-32 w3-center" action="MessageSent.html">
+				<label>From:<label><br>
+				<input class="w3-input w3-border w3-round-large w3-light-gray w3-center" type="text" value="Molly Davis" readonly><br>
+				<label>To:<label><br>
+				<input class="w3-input w3-border w3-round-large w3-light-gray w3-center" type="text"  value="Tina Thomas" readonly><br>
+				<label>Message:</label>
+				<textarea class="w3-input w3-border w3-round-large w3-center" type="textarea" required></textarea>
+				<br><br>
+				<button class="w3-button w3-teal" type="submit">Send</button>
+			  </form>
+			</div>
+		  </div>
+		</ul>
+		<!--Footer-->
+		<div class="w3-display-container w3-blue-grey w3-center w3-small w3-hide-small">
+			<p class="w3-hide-small w3-padding">&copy; Copyright 2019 PROXIMATE</p>
+			<p class="w3-hide-small">Designed by Anika Neela</p>
+			<a href="#"><i class="fab fa-facebook-f w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-twitter w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-google w3-large w3-round w3-margin-left"></i></a>
+		</div>
+	</div>
+</body>
+</html>
