@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet href="href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+	/*template came with this internal style-sheet */
+	
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	/*#main {margin-left: 120px}*/
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}};
+	
+ul.breadcrumb {
+	list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+
+<script>
+	//using w3-classes to hide and show the sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").classList.add("w3-show"); 
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").classList.remove("w3-show").classList.add("w3-hide");
+	}
+</script>
+</head>
+<body class="w3-mobile">
+	<!--Mobile Friendly Hamburger Menu-->
+	<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-hide-large w3-hide-medium w3-center w3-black" id="mySidebar">
+	  <button class="w3-bar-item w3-button w3-xxlarge w3-hide-large w3-hide-medium" onclick="w3_close()">&times;</button>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#">HOME</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#contact">INBOX</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#schedule">SCHEDULE</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#alerts">ALERTS</a>
+	  <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="#favorites">FAVORITES</a>
+	</div>
+
+	<nav class="w3-sidebar w3-bar-block w3-hide-small w3-center w3-black">
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-large">
+		<p class="w3-large">LOGO</p>
+	  </a>
+	  <a href="Home.html" class="w3-bar-item w3-button w3-padding-32 w3-light-gray">
+		<i class="fa fa-home w3-xxlarge"></i>
+		<p class="w3-small">HOME</p>
+	  </a>
+		<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fa fa-envelope w3-xxlarge"></i>
+		<p class= "w3-small">INBOX</p>
+	  </a>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-calendar-alt w3-xxlarge"></i>
+		<p class= "w3-small">SCHEDULE</p>
+	  </a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-bell w3-xxlarge"></i>
+		<span class="w3-badge w3-small w3-green">3</span>
+		<p class= "w3-small w3-center">ALERTS</p>
+	  </a>
+	  </a>
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">
+		<i class="fas fa-heart w3-xxlarge"></i>
+		<p class= "w3-small">FAVORITES</p>
+	  </a>
+	</nav>
+
+	<div class="w3-main w3-mobile" style="margin-left:120px">
+		<div class="w3-blue-grey">
+			<div class="w3-dropdown-hover w3-right w3-blue-grey">
+			<button class="w3-button w3-padding w3-blue-grey"><a href="">Molly Davis</a></button>
+				<div id="accountDropDown" class="w3-dropdown-content w3-bar-block w3-card-4 w3-border">
+				  <a href="MyProfile.html" class="w3-bar-item w3-button">My Profile</a>
+				  <a href="PaymentMethod.html" class="w3-bar-item w3-button">Payment Method</a>
+				  <a href="#" class="w3-bar-item w3-button">Help Center</a>
+				  <a href="#" class="w3-bar-item w3-button">Privacy</a>
+				  <a href="Login.html" class="w3-bar-item w3-button">Logout</a>
+				</div>
+			</div>
+		  <button class="w3-button w3-xxlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+		  <a style="text-decoration:none">
+			  <div class="w3-container w3-blue-grey">
+				<h1 class="w3-center">MY PROFILE</h1>
+				<h6 class="w3-center">Update your profile to stay on top of your game.</h6>
+			  </div>
+		   </a>
+	   <!--Breadcrumb-->
+		<ul class="breadcrumb w3-medium w3-light-gray w3-padding">
+		  <li><a href="Home.html">Home</a></li>
+		  <li>My Profile</li>
+		</ul>	
+		</div>		
+		<!--Offer details-->
+		<ul class="w3-ul w3-padding-large">
+			<li class="w3-bar">
+				<a href="OfferDetails.html" style="text-decoration:none" class="w3-hover-opacity">
+				
+				<div class="w3-display-container">
+				<p class="w3-center w3-padding">
+					<a href=""><img src="Images/molly.jpg" class="w3-bar-item w3-circle w3-hide-small w3-hover-grayscale" style="width:20%"></a>
+				</p>
+				<p class="w3-display-hover w3-blue-grey w3-round-large w3-display-position w3-padding" style="top:100px;left:100px"><a href="" class="w3-hover-grayscale" style="text-decoration:none"><i class="fas fa-camera-retro w3-hover-sepia w3-large" ></i><b>Upload</b></p></a>
+				</div>
+				
+				<div class="w3-bar-item w3-padding">
+					<br>
+					<span class="w3-large"><b>Molly Davis</b></span>
+					<br>
+					<span>Interior Designer</span>
+					<br>
+					<br>
+					<span class="far fa-star w3-text-orange"></span>
+					<span class="far fa-star w3-text-orange"></span>
+					<span class="far fa-star w3-text-orange"></span>
+					<span class="far fa-star w3-text-orange"></span>
+					<span class="far fa-star w3-text-orange"></span>
+					<br>
+					<span>Ratings (0)</span>
+					<br>
+					<button class="w3-button w3-teal" disabled><a href="OfferDetails_Success.html" style="text-decoration:none">Request Service</button><span><button class="w3-button w3-circle w3-margin" disabled><i class="far fa-heart w3-xlarge w3-text-teal"></i></button></span>
+				</div>
+				<span><a href="#"><i class="fas fa-share-alt w3-text-teal w3-right w3-xlarge w3-margin-left w3-hover-opacity"></i></a></span>
+				<span><a href="#"><i class="fas fa-pencil-alt w3-text-teal w3-right w3-xlarge w3-hover-opacity"></i></a></span>
+			</li>
+			<li class="w3-bar">
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>About Me</b></p>
+						<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
+					</div>
+				</div>
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>Education/Certification</b></p>
+						<p><i>Lorem ipsum dolor sit amet.</i></p>
+					</div>
+				</div>
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>Contact Number</b></p>
+						<p><i>715-222-3333</i></p>
+					</div>
+				</div>
+				<div class="w3-margin">
+					<div class="w3-container w3-margin">
+						<p><b>Home Address</b></p>
+						<p><i>2100 Main St, Stevens Point, WI 54481</i></p>
+					</div>
+				</div>
+				<div class="w3-margin" id="postedServices">
+					<div class="w3-container w3-margin">
+						<p><b>Other Services</b></p>
+						<div class="w3-border">
+						<div class="w3-border w3-padding">
+							<span>
+								<span>Interior Design:</span>
+								<span>$20/hr</span>
+							</span>
+							<span><button class="w3-button w3-red w3-margin">Delete Service</button></span>
+							<span class="w3-margin-left">Baby-sitting: $30/hr</span>
+							<span><button class="w3-button w3-red w3-margin">Delete Service</button></span>
+							<span class="w3-margin-left">Repair: $15/hr</span>
+							<span><button class="w3-button w3-red w3-margin">Delete Service</button></span>
+						</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!--Footer-->
+		<div class="w3-display-container w3-blue-grey w3-center w3-small w3-hide-small">
+			<p class="w3-hide-small w3-padding">&copy; Copyright 2019 PROXIMATE</p>
+			<p class="w3-hide-small">Designed by Anika Neela</p>
+			<a href="#"><i class="fab fa-facebook-f w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-twitter w3-large w3-round w3-margin-left"></i></a>
+			<a href="#"><i class="fab fa-google w3-large w3-round w3-margin-left"></i></a>
+		</div>
+	</div>
+</body>
+</html>
